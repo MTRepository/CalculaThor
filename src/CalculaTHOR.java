@@ -49,7 +49,8 @@ public class CalculaTHOR {
             System.out.println("5 - Find factorial");
             System.out.println("6 - Convert decimal number to binary code");
 
-            // Error control -
+            // Error control - to be created
+            // is integer?
 
             // screen read-off
             readOff = scan.nextInt();
