@@ -48,6 +48,7 @@ public class CalculaTHOR {
             System.out.println("4 - Divide numbers");
             System.out.println("5 - Find factorial");
             System.out.println("6 - Convert decimal number to binary code");
+            System.out.println("7 - Calculate power");
 
             // Error control - to be created
             // is integer?
@@ -55,6 +56,7 @@ public class CalculaTHOR {
             // screen read-off
             readOff = scan.nextInt();
 
+            // For easier use of the console
             // Option 0
             if(readOff == 0) { System.out.println("Bye!"); break; }
 
@@ -132,6 +134,19 @@ public class CalculaTHOR {
 
             }
 
+            // Option 7
+            if(readOff == 7) {
+
+                System.out.println("Give me the basis");
+                first = scan.nextInt();
+                System.out.println("Give me the exponent");
+                second = scan.nextInt();
+
+                third = power(first,second);
+                System.out.println(third);
+
+            }
+
             System.out.println("What now?");
             System.out.println("0 - leave the program");
             System.out.println("1 - calculate further");
@@ -185,6 +200,15 @@ public class CalculaTHOR {
 
     }
 
+    public static int power (int var1, int var2) {
+
+        for (int i = 2; i <= var2; i++) {
+            var1 = var1 * var1;
+        }
+        return var1;
+
+    }
+
     public static String findBinary(int decimal) {
 
         int[] binaries = new int[14];
@@ -218,10 +242,10 @@ public class CalculaTHOR {
 
         }
 
-        String mara;
-        mara = mat.toString();
+        String marixToReturn;
+        marixToReturn = mat.toString();
 
-        return mara;
+        return marixToReturn;
 
     }
 
